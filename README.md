@@ -38,4 +38,5 @@ pip install streamlit opencv-python matplotlib nibabel
 
 Run app
 ```
+streamlit run demo/app.py
 ```
