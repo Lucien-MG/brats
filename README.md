@@ -40,3 +40,9 @@ Run app
 ```
 streamlit run demo/app.py
 ```
+
+## Link:
+
+Liens du papier:
+
+https://www.lrde.epita.fr/www/dload-new/papers/boutry.21.miccai.pdf
