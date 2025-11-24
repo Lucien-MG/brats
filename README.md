@@ -21,7 +21,7 @@ curl --create-dirs -L -o ./data/brats20-dataset-training-validation.zip https://
 
 Then unzip the data:
 ```
-unzip brats20-dataset-training-validation.zip "BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/BraTS20_Training_0[0-5][0-9]/*"
+unzip data/brats20-dataset-training-validation.zip "BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/BraTS20_Training_0[0-5][0-9]/*"
 ```
 
 # How to run
