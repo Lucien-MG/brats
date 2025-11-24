@@ -6,6 +6,12 @@ A simple unet in pytorch for brain tumor segmentation.
 git clone https://github.com/Lucien-MG/brats
 ```
 
+then enter in the repo:
+```
+cd brats
+```
+
+
 ## Download data
 
 To dowload the datasets run:
