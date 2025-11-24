@@ -1,7 +1,7 @@
 # brats
 A simple unet in pytorch for brain tumor segmentation.
 
-## Clone me
+## Clone me
 ```
 git clone https://github.com/Lucien-MG/brats
 ```
