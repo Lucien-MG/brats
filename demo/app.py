@@ -228,6 +228,8 @@ def predict_volume(model, flair_vol, t1ce_vol, device):
 # 4. MAIN APP UI
 # ==========================================
 
+devices = ["cpu"]
+
 def main():
     st.title("🧠 BraTS 2020 Tumor Segmentation Viewer")
     st.markdown("Visualize FLAIR MRI, Ground Truth Labels, and Model Predictions.")
@@ -239,7 +241,13 @@ def main():
     dataset_root = st.sidebar.text_input("Dataset Path", DEFAULT_DATA_PATH)
     model_path = st.sidebar.text_input("Model Path (.pth)", "weights/" + "unet_brats.pth")
     
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    for i in range(torch.cuda.device_count()):
+        devices.append(torch.cuda.get_device_properties(i).name)
+
+    # select device with streamlit
+    selected_device = st.sidebar.selectbox("Device", devices)
+
+    device = torch.device(selected_device)
     st.sidebar.info(f"Running on: {device}")
 
     # Get list of available cases
